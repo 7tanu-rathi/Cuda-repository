@@ -1,0 +1,50 @@
+#include<stdio.h>
+#define n 4096
+int main()
+{
+ float t1,t2,t3;
+ int *a, *b, *c, i,j,k;
+
+ //printf("enter the no. of rows and columns of matrix a");
+ //scanf("%d%d",&n,&m);
+ //printf("enter the no. of rows and columns of matrix b");
+ //scanf("%d%d",&p,&r);
+
+  size_t s= n*n*sizeof(int);
+  a= (int*)malloc(s);
+  b= (int*)malloc(s);
+  c= (int*)malloc(s);
+  for(i=0;i<n;i++)
+  {
+   for(j=0;j<n;j++)
+    {
+      a[i*n+j]=1;
+      b[i*n+j]=2;
+    }  
+  }
+  
+  t1=clock();
+  for(i=0;i<n;i++)
+  {
+   for(j=0;j<n;j++)
+   {
+    for(k=0;k<n;k++)
+    {
+     c[i*n+j]= c[i*n+j]+ a[i*n+k]*b[k*n+j];
+    }
+   }
+  }
+  /*for(i=0;i<1;i++)
+  {
+   printf("\n");
+   for(j=0;j<1;j++)
+   {
+    printf("%d\t",c[i*n+j]);
+   }
+  }*/
+  t2=clock();
+  t3=(t2-t1);
+//  t3/=1000000
+  printf("time in cpu\t%f",(t3/1000000)); 
+ } 
+

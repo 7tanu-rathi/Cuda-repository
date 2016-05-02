@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+ float A[10], B[10], C[10];
+int i;
+ printf("enter the size of the vector");
+ int N;
+ scanf("%d",&N);
+ for(i=0;i<N;i++)
+ {
+  printf("Enter the values in the two vectors"):
+  scanf("%d%d",&a[i],&b[i]);
+ }
+
+ //sequential summing in c
+ for (i=0;i<N;i++)
+ {
+   c[i]=a[i]+b[i]; 
+ }
+
+ // Kernel invocation with N threads
+    VecAdd<<<1, N>>>(A, B, C);
+
+ getch();
+ return 0;
+}
+
+// Kernel definition
+__global__ void VecAdd(float* A, float* B, float* C)
+{
+    int i = threadIdx.x;
+    C[i] = A[i] + B[i];
+}
+

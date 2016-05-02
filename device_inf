@@ -1,0 +1,20 @@
+    --- General Information for device 1 ---
+Name:   Quadro FX 5600
+Compute capability:  1.0
+Clock rate:   1350000
+Device copy overlap:   Disabled
+Kernel execition timeout :   Disabled
+    --- Memory Information for device 1 ---
+Total global mem:   1610416128
+Total constant Mem:   65536
+Max mem pitch:   2147483647
+Texture Alignment:   256
+   --- MP Information for device 1 ---
+Multiprocessor count:   16
+Shared mem per mp:   16384
+Registers per mp:   8192
+Threads in warp:   32
+Max threads per block:   512
+Max thread dimensions:   (512, 512, 64)
+Max grid dimensions:   (65535, 65535, 1)
+
